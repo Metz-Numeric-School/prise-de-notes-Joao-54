@@ -1,0 +1,7 @@
+print("================ DÉBUT PROGRAMME ================\n\n")
+carac = str(input("Entrez une chaîne de caractères: "))
+last = len(carac)
+print("La longueur de la chaîne est de",len(carac),"caractères.")
+print("Le premier caractère de la chaîne est",carac[0])
+print("Le dernier caractère de la chaîne est",carac[last-1])
+print("\n\n================ FIN PROGRAMME ================")
