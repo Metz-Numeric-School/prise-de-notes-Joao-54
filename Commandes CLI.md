@@ -41,6 +41,10 @@ faire des sous interfaces:
 lier deux périphériques en mode trunk:
 	int <port>
 	switchport mode trunk
+OU
+	int <port>
+	switchport trunk encapsulation dot1q
+
 
 ----------------------------------------------
 
@@ -101,10 +105,15 @@ Retirer switchport puis mettre une nvl ip:
 
 -----------------------------------------------
 
-Commande pour rediriger la routeur ailleurs:
+Commande pour rediriger le routeur ailleurs:
 
 	ip route <adresse ip> <subnet mask> <ip destinataire>
 
 (mettre "0.0.0.0 0.0.0.0" pour dire qu'on cherche toutes les ip et subnet mask | ip destinataire = où chercher)
 
 -----------------------------------------------
+
+Routeur:
+int <port>
+no ip address (ou ip address <IP> <SubnetMask>)
+no shutdown
