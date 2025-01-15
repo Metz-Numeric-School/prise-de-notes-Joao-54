@@ -44,6 +44,7 @@ lier deux périphériques en mode trunk:
 OU
 	int <port>
 	switchport trunk encapsulation dot1q
+	switchport mode trunk
 
 
 ----------------------------------------------
@@ -84,6 +85,7 @@ Changer le nom d'un appareil:
 Activer les VLAN transférées sur le switch + leur donner une IP:
 	int vlan <id vlan>
 	ip address <gateway> <subnet mask>
+	no shutdown
 
 -----------------------------------------------
 
@@ -117,3 +119,14 @@ Routeur:
 int <port>
 no ip address (ou ip address <IP> <SubnetMask>)
 no shutdown
+
+------------------------------------------------
+
+Afficher l'ip sur pnetlab:
+Show ip
+
+-------------------------------------------------
+
+Attribuer une ip à un vpc Pnetlab:
+
+ip <adresse ip> <subnet mask ou CIDR> <passerelle par défaut>
