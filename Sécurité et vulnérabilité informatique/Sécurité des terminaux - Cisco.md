@@ -324,3 +324,294 @@ Le **Metasploit Project** est un outil de sécurité informatique utilisé pour 
 
 - Le **whaling** est un type de phishing visant des personnes influentes, comme des cadres supérieurs, des politiciens ou des célébrités.
 
+------------------
+## **Autres types d'attaques**
+
+
+- **Attaques physiques** :  
+    Actions visant à endommager ou voler du matériel. Exemples :
+    
+    - USB infectées par des malwares.
+    - Câbles modifiés pour prendre le contrôle des appareils.
+    - Clonage de cartes bancaires via des terminaux frauduleux.
+
+- **Attaques sur l’intelligence artificielle** :  
+    Exploitation de données falsifiées pour tromper les algorithmes. Exemple : induire en erreur des véhicules autonomes en manipulant les panneaux de signalisation.
+
+- **Attaques sur la chaîne d'approvisionnement** :  
+    Compromission de services ou composants tiers. Exemple : modifier les dates de fin de support d’un logiciel pour perturber une entreprise.
+
+- **Attaques sur le cloud** :  
+    Exploitation des données sensibles, applications ou infrastructures hébergées dans le cloud.
+
+-----------
+## **Perte de données**
+
+- **E-mails et réseaux sociaux** : Les messages interceptés (e-mails ou messagerie instantanée) peuvent révéler des informations confidentielles si elles ne sont pas sécurisées.
+    
+- **Appareils non chiffrés** : Si un ordinateur portable volé contient des données sensibles et n'est pas chiffré, un voleur peut accéder à ces informations.
+    
+- **Stockage cloud** : Bien que le stockage dans le cloud présente des avantages, des données sensibles peuvent être perdues si la sécurité de l'accès au cloud est faible.
+    
+- **Médias amovibles** : Un transfert non autorisé de données vers une clé USB ou la perte d'une clé contenant des informations confidentielles constitue un risque majeur.
+    
+- **Copies papier** : Les données confidentielles doivent être correctement détruites, par exemple, en les broyant. Sinon, des informations sensibles pourraient être récupérées dans des rapports jetés.
+    
+- **Contrôle d'accès inadéquat** : Les mots de passe sont essentiels pour protéger les données. Des mots de passe volés ou faibles permettent un accès facile aux données sensibles.
+
+----------
+
+## **Menace, Vulnérabilité, Risque**
+
+- **Menace (Threat)** : Danger potentiel pour un actif (données, réseau).
+
+- **Vulnérabilité (Vulnerability)** : Faiblesse dans un système pouvant être exploitée par une menace.
+
+- **Surface d'attaque (Attack Surface)** : Ensemble des vulnérabilités accessibles à un attaquant.
+
+- **Exploitation (Exploit)** : Mécanisme permettant d'exploiter une vulnérabilité pour compromettre un actif.
+
+- **Risque (Risk)** : Probabilité qu'une menace exploite une vulnérabilité et cause un dommage.
+
+
+- **Acceptation du risque (Risk Acceptance)** : Le coût des options de gestion du risque dépasse celui du risque lui-même. Le risque est accepté et aucune action n'est entreprise.
+
+- **Évitement du risque (Risk Avoidance)** : Cela consiste à éviter toute exposition au risque en éliminant l'activité ou le dispositif qui le présente. En éliminant l'activité, les bénéfices potentiels sont également perdus.
+
+- **Réduction du risque (Risk Reduction)** : Réduire l'exposition au risque ou l'impact du risque en prenant des mesures pour le diminuer. C'est la stratégie de gestion des risques la plus couramment utilisée, nécessitant une évaluation soignée des coûts, de la stratégie de réduction et des bénéfices associés.
+
+- **Transfert du risque (Risk Transfer)** : Une partie ou la totalité du risque est transférée à un tiers volontaire, comme une compagnie d'assurance.
+-----------
+
+## **Indicateurs de menace**
+
+- Les **indicateurs de compromission (IOC)** sont des preuves qu'une attaque a eu lieu, comme des fichiers malveillants ou des adresses IP utilisées. Ils aident à identifier et à prévenir des attaques similaires.
+
+- Les **indicateurs d'attaque (IOA)** se concentrent sur les stratégies des attaquants. Ils permettent de mettre en place une défense proactive pour contrer des attaques futures utilisant les mêmes méthodes.
+
+Les gouvernements, comme la **CISA** aux États-Unis et l'**ENISA** en Europe, promeuvent la cybersécurité. La **CISA** utilise le système **AIS** pour partager des informations sur les menaces et organise des campagnes de sensibilisation comme le **Mois de la cybersécurité**.
+
+----
+## **IPv4**
+
+![[Pasted image 20250121095845.png]]
+
+- **Version** : 4 bits indiquant qu'il s'agit d'un paquet IPv4 (0100).
+
+- **Internet Header Length (IHL)** : 4 bits pour la longueur de l'en-tête IP (minimum 20 octets).
+
+- **Differentiated Services (DS)** : 8 bits pour la priorité du paquet, comprenant DSCP et ECN.
+
+- **Total Length** : 2 octets spécifiant la taille totale du paquet (en-tête + données utilisateur).
+
+- **Identification, Flag, Fragment Offset** : Utilisés pour fragmenter et réassembler les paquets si nécessaire.
+
+- **Time-to-Live (TTL)** : 8 bits limitant la durée de vie du paquet, décrémenté par chaque routeur.
+
+- **Protocol** : 8 bits indiquant le type de données du paquet (ex. ICMP, TCP, UDP).
+
+- **Header Checksum** : Calculé pour vérifier les erreurs dans l'en-tête du paquet.
+
+- **Source IPv4 Address** : 32 bits représentant l'adresse IPv4 source.
+
+- **Destination IPv4 Address** : 32 bits représentant l'adresse IPv4 de destination.
+
+- **Options and Padding** : Champ variable, complété par des zéros si nécessaire pour aligner à 32 bits.
+
+
+## **IPv6**
+
+![[Pasted image 20250121101856.png]]
+- **Version** : 4 bits indiquant qu'il s'agit d'un paquet IPv6 (0110).
+
+- **Traffic Class** : 8 bits, équivalent au champ DS d'IPv4, utilisé pour la gestion de la priorité du paquet.
+
+- **Flow Label** : 20 bits suggérant que les paquets avec le même flow label sont traités de la même manière par les routeurs.
+
+- **Payload Length** : 16 bits, indiquant la longueur de la portion de données (payload) du paquet IPv6.
+
+- **Next Header** : 8 bits, équivalent au champ Protocole d'IPv4, indiquant le type de données transportées.
+
+- **Hop Limit** : 8 bits, remplaçant le champ TTL d'IPv4, qui est décrémenté par chaque routeur. Si le compteur atteint 0, le paquet est rejeté et un message ICMPv6 est envoyé.
+
+## **Vulnérabilités des IP**
+
+- **Attaques ICMP** : Utilisation de paquets ICMP pour découvrir des sous-réseaux, générer des attaques par déni de service (DoS) ou modifier les tables de routage des hôtes.
+- **Attaques par déni de service (DoS)** : Tentatives d'empêcher les utilisateurs légitimes d'accéder à des informations ou des services.
+- **Attaques par déni de service distribué (DDoS)** : Attaque coordonnée simultanée à partir de plusieurs machines sources.
+- **Attaques par usurpation d'adresse (Spoofing)** : Usurpation de l'adresse IP source pour réaliser un spoofing aveugle ou non-aveugle.
+- **Attaque de l'homme du milieu (MiTM)** : L'attaquant se place entre la source et la destination pour surveiller, capturer ou manipuler la communication.
+- **Prise de session (Session Hijacking)** : L'attaquant utilise un MiTM pour prendre le contrôle d'une session après avoir accédé au réseau physique.
+
+
+
+## **Attaques ICMP**
+
+- **ICMP echo request et echo reply** : Utilisés pour la vérification des hôtes et les attaques DoS.
+
+- **ICMP unreachable** : Utilisés pour des attaques de reconnaissance et de balayage du réseau.
+
+- **ICMP mask reply** : Utilisés pour cartographier un réseau IP interne.
+
+- **ICMP redirects** : Utilisés pour détourner un hôte cible afin d'envoyer tout son trafic à un appareil compromis, créant ainsi une attaque MiTM.
+
+- **ICMP router discovery** : Utilisés pour injecter de fausses entrées de route dans la table de routage d'un hôte cible.
+
+## **Amplification and Reflection Attacks**
+
+- **Amplification** : L'attaquant envoie des messages ICMP echo request à plusieurs hôtes en utilisant l'adresse IP de la victime comme source.
+- **Reflection** : Ces hôtes répondent à l'adresse IP usurpée de la victime, la submergeant avec un grand nombre de réponses.
+
+## **Address Spoofing Attacks**
+
+- **IP Address Spoofing** :
+    
+    - Création de paquets avec une fausse adresse IP source pour masquer l'identité de l'expéditeur ou se faire passer pour un utilisateur légitime.
+    - Souvent utilisé dans des attaques comme les attaques Smurf.
+    - **Non-blind spoofing** : L'attaquant voit le trafic entre l'hôte et la cible. Utilisé pour analyser les réponses, prédire les numéros de séquence ou détourner des sessions autorisées.
+    - **Blind spoofing** : L'attaquant ne voit pas le trafic entre l'hôte et la cible. Utilisé dans des attaques DoS.
+
+- **MAC Address Spoofing** :
+    
+    - L'attaquant modifie l'adresse MAC de son appareil pour imiter une adresse connue sur le réseau interne.
+    - Le commutateur met à jour sa table CAM avec le nouvel emplacement, redirigeant le trafic destiné à la cible vers l'attaquant.
+
+- **Application/Service Spoofing** :
+    
+    - Un attaquant peut connecter un faux serveur DHCP pour créer une condition d'homme du milieu (MiTM).
+
+-------
+
+## **Vulnérabilités TCP et UDP**
+
+### Bits de contrôle TCP
+
+![[Pasted image 20250121141007.png]]
+- **URG** : Champ pointeur urgent significatif.
+- **ACK** : Champ d'accusé de réception significatif.
+- **PSH** : Fonction Push.
+- **RST** : Réinitialise la connexion.
+- **SYN** : Synchronise les numéros de séquence.
+- **FIN** : Fin de transmission de données.
+
+### Services TCP
+
+- **Livraison fiable** : Utilise des accusés de réception pour garantir la livraison (ex. HTTP, TLS, FTP).
+- **Contrôle de flux** : Réduit le nombre d'accusés de réception en regroupant plusieurs segments.
+- **Communication avec état** : Établit une connexion via une **poignée de main en trois étapes (3-way handshake)**.
+
+### Attaques TCP
+
+- **TCP SYN Flood** :
+    
+    - Exploite la poignée de main en trois étapes.
+    - Envoie des paquets SYN avec des adresses IP usurpées.
+    - Le serveur répond par SYN-ACK, mais ne reçoit jamais de réponse.
+    - Résultat : Connexions TCP semi-ouvertes surchargent le serveur, bloquant les utilisateurs légitimes.
+
+- **TCP Reset Attack** :
+    
+    - Interrompt une connexion TCP en envoyant un paquet contenant un bit RST.
+    - Utilisé pour mettre fin brutalement à une session entre deux hôtes.
+
+- **TCP Session Hijacking** :
+    
+    - L'attaquant prend le contrôle d'une session TCP existante.
+    - Nécessite de prédire le numéro de séquence et de falsifier l'adresse IP d'un hôte authentifié.
+    - Permet à l'attaquant d'envoyer des données, mais pas de recevoir.
+
+
+### Services TCP
+
+1. **Livraison fiable** :
+    - Garantit la livraison des données grâce à des accusés de réception.
+    - Réémet les données si un accusé de réception n'est pas reçu.
+    - Exemples : HTTP, SSL/TLS, FTP, transferts de zones DNS.
+
+1. **Contrôle de flux** :
+    - Réduit le nombre d'accusés de réception en regroupant plusieurs segments en un seul accusé.
+
+1. **Communication avec état** :
+    - Utilise une **poignée de main en trois étapes (Three-Way Handshake)** :
+        1. **Client** demande une session (SYN).
+        2. **Serveur** répond en confirmant la demande (SYN-ACK).
+        3. **Client** confirme l'établissement de la session (ACK).
+
+
+### Attaques TCP
+
+
+1. **Scan de ports** :
+    
+    - Les acteurs malveillants identifient les services offerts par une cible en scannant les ports TCP ou UDP.
+    
+2. **Attaque par inondation TCP SYN** :
+    
+    - Exploite la poignée de main TCP en trois étapes.
+    - Envoie de nombreuses requêtes SYN avec des IP usurpées.
+    - Le serveur répond avec des SYN-ACK, mais les réponses (ACK) ne sont jamais envoyées.
+    - Résultat : le serveur est surchargé par des connexions TCP "semi-ouvertes", empêchant l'accès des utilisateurs légitimes.
+    
+3. **Attaque par réinitialisation TCP (RST)** :
+    
+    - Envoie des paquets TCP avec le drapeau RST pour forcer la fermeture immédiate de connexions TCP légitimes.
+    
+4. **Détournement de session TCP** :
+    
+    - Le pirate prend le contrôle d'une session TCP active entre deux hôtes.
+    - Nécessite de prédire le numéro de séquence TCP et d'usurper une adresse IP.
+    - Permet d'envoyer des données au nom de la victime, mais pas d'en recevoir.
+
+
+### **UDP Segment Header and Operation**
+
+- **Applications courantes** :
+    
+    - Utilisé par **DNS**, **DHCP**, **TFTP**, **NFS**, **SNMP** et pour des applications en temps réel comme le streaming multimédia ou la VoIP.
+- **Caractéristiques principales** :
+    
+    - **Protocole sans connexion** : Moins de surcharge comparé à TCP.
+    - Ne propose pas de fonctionnalités comme la retransmission, la numérotation des segments ou le contrôle de flux.
+- **Structure du segment UDP** :
+    
+    - **Taille totale : 8 octets**, suivis des données de la couche application.
+    - Champs :
+        - **Source Port** : 16 bits
+        - **Destination Port** : 16 bits
+        - **Length** : 16 bits (longueur totale du segment UDP)
+        - **Checksum** : 16 bits (vérification d’intégrité)
+        - **Données de la couche application** : Taille variable.
+- **Fiabilité** :
+    
+    - Bien que UDP soit considéré comme non fiable, cela signifie simplement que la fiabilité n’est pas gérée par le protocole lui-même. Si nécessaire, cette fonction est mise en œuvre à d'autres niveaux.
+- **Avantage clé** :
+    
+    - La faible surcharge rend UDP idéal pour les transactions simples de requêtes/réponses (exemple : DHCP), où la retransmission peut être gérée par l'application en cas d'absence de réponse.
+
+
+### **Attaques UDP**
+
+UDP, sans chiffrement natif, expose les données à la modification et l'interception.
+
+Les attaques UDP Flood permettent de surcharger les réseaux en envoyant massivement des paquets UDP, provoquant un déni de service (DoS).
+
+---------------------------------
+
+### **ARP Vulnerabilities**
+
+Les **vulnérabilités ARP** permettent à un attaquant d'exploiter le protocole **ARP** en envoyant des réponses **ARP** falsifiées. Cela peut mener à un **empoisonnement ARP**, où l'attaquant associe sa propre adresse MAC à l'adresse IP du passerelle par défaut. Cela crée une attaque de **l'homme du milieu (MiTM)**, où l'attaquant intercepte et manipule le trafic entre les appareils du réseau et l'extérieur, sans que les victimes s'en aperçoivent.
+
+
+### **Attaques DNS**
+
+#### DNS cache poisoning attacks
+Les attaquants envoient des informations falsifiées de ressources DNS à un résolveur DNS, redirigeant ainsi les utilisateurs vers des sites malveillants. Cela se produit lorsque le résolveur utilise un serveur DNS malveillant, influençant ainsi les résolutions DNS.
+
+#### DNS amplification and reflection attacks
+Les attaquants exploitent des serveurs DNS ouverts pour envoyer un volume élevé de requêtes vers une cible, masquant ainsi l'origine réelle de l'attaque. Le serveur DNS ouvert répond à n'importe quelle requête, augmentant ainsi l'ampleur de l'attaque.
+
+#### DNS resource utilization attacks
+Ces attaques de type DoS consomment les ressources d'un serveur DNS ouvert, entraînant une surcharge qui peut nécessiter un redémarrage ou une interruption des services du serveur DNS.
+
+
+
